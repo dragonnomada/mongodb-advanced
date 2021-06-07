@@ -23,7 +23,7 @@
 * CRUD
 * Modelo Relacional
 * Modelo No relacional
-* Estrategia de relación externa (referiado)
+* Estrategia de relación externa (referenciado)
 * Estrategia de relación interna (embebido)
 
 ### Módulo 3
