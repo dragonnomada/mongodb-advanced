@@ -1,19 +1,31 @@
 db = db.getSiblingDB("tienda");
 
+// db.<coll>.<method>(...<params>) -> TRANSACCIÓN
+
+// QUERY(READ) -> CURSOR (it)
+// BULK(WRITE) -> RESULT (doc)
+
 function getRandomUser() {
     const totalUsers = db.users.count();
-    return db.users.find().limit(1).skip(Math.floor(Math.random() * (totalUsers - 1))).next();
+
+    // const cursor = db.users.find();
+    // cursor.limit(1)
+    // cursor.sort(...)
+    // const doc = cursor.next(); 
+    // const docs = cursor.toArray();
+
+    return db.users.find().limit(1).skip(Math.floor(Math.random() * (totalUsers - 2))).next();
 }
 
 function getRandomProduct() {
     const totalProducts = db.products.count();
-    return db.products.find().limit(1).skip(Math.floor(Math.random() * (totalProducts - 1))).next();
+    return db.products.find().limit(1).skip(Math.floor(Math.random() * (totalProducts - 2))).next();
 }
 
 function getRandomProductList(min = 1, max = 20) {
     const totalProductsShopping = Math.floor(Math.random() * (max - min) + min);
 
-    const products = []
+    const products = [];
 
     for (let i = 0; i < totalProductsShopping; i++) {
         const product = getRandomProduct();
@@ -48,11 +60,7 @@ function openShoppingCart(_id) {
     }
 
     return shoppingCart;
-}  
-
-let shoppingCart = openShoppingCart("123");
-
-printjson(shoppingCart);
+}
 
 function updateShoppingCart(shoppingCart) {
     db.shoppingCarts.updateOne({ _id: shoppingCart._id }, {
@@ -62,9 +70,35 @@ function updateShoppingCart(shoppingCart) {
     return db.shoppingCarts.findOne({ _id: shoppingCart._id });
 }
 
-if (!shoppingCart.user) {
-    shoppingCart.user = getRandomUser();
-    shoppingCart = updateShoppingCart(shoppingCart);
+
+function updateShoppingCartTotal(shoppingCart) {
+    const total = shoppingCart.products.reduce((total, product) => total + product.price, 0);
+    shoppingCart.total = total;
+    shoppingCart.productsCount = shoppingCart.products.length;
+    return updateShoppingCart(shoppingCart);
 }
 
-printjson(shoppingCart);
+for (let i = 0; i < 600; i++) {
+    let shoppingCart = openShoppingCart(`shopping-cart-${i}`);
+
+    printjson(shoppingCart);
+
+    if (!shoppingCart.user) {
+        shoppingCart.user = getRandomUser();
+        shoppingCart = updateShoppingCart(shoppingCart);
+        print(`El usuario del carrito ha sido asignado`);
+        printjson(shoppingCart);
+    }
+
+    // No hay productos en el carrito
+    if (shoppingCart.products.length === 0) {
+        shoppingCart.products = getRandomProductList();
+        shoppingCart = updateShoppingCart(shoppingCart);
+        print(`Se han agregado productos al carrito`);
+        printjson(shoppingCart);
+    }
+
+    shoppingCart = updateShoppingCartTotal(shoppingCart);
+    print(`Se ha actualizado el total del carrito`);
+    printjson(shoppingCart);
+}
