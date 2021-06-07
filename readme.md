@@ -40,5 +40,5 @@
 * Actualización de escalares
 * Actualización en Arreglos
 * Actualización en objetos
-* Upserts (Actualinserciones)
+* Upserts (Autoinserciones)
 * Proyecto 1
