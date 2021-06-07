@@ -1,0 +1,20 @@
+{
+    "_id": ObjectId("12345asdafda"),
+    "name": {
+        "title": "Dra.",
+        "firstname": "María",
+        "lastname": "Goméz"
+    },
+    "dob": {
+        "year": "1987",
+        "month": "jan",
+        "day": 21        
+    },
+    "shoppings": [
+        {
+            "shoppingId": "456",
+            "rate": 4
+        }
+    ],
+    "createAt": ISODate("2012-05-23")
+}

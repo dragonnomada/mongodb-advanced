@@ -1,0 +1,19 @@
+{
+    "_id": 123,
+    "name": {
+        "title": "Dra.",
+        "firstname": "María",
+        "lastname": "Goméz"
+    },
+    "dob": {
+        "year": "1987",
+        "month": "jan",
+        "day": 21        
+    },
+    "shoppings": [
+        {
+            "shoppingId": "456",
+            "rate": 4
+        }
+    ]
+}

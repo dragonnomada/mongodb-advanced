@@ -1,0 +1,19 @@
+{}
+
+{     }
+
+{  "abc": true }
+
+{  "abc": false }
+
+{  "abc": null }
+
+{  "abc": [] }
+
+{  "abc": [true] }
+
+{  "abc": [true, false] }
+
+{  "abc": [true, false, null] }
+
+{  "abc": [true, false, null, { "xyx": 123 } ] }
