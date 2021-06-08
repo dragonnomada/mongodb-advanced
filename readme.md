@@ -5,7 +5,7 @@
 * Sesión 1 - Fundamentos de Mongodb: Instalación, arquitectura, consultas y actualizaciones
 * Sesión 2 - Confuguración de un servidor: Agregaciones, Comandos de Linux, instalación y Replica Sets
 * Sesión 3 - Configuración de nodos (multi-servidor): Sharding y Routers
-* Sesión 4 - Configuración real de múltiples nodos en Raspberry: Clústers reales
+* Sesión 4 - Configuración real de múltiples nodos en Raspberry: Clústers reales y Proyectos
 
 ## Sesión 1
 
@@ -77,6 +77,7 @@
 ### Módulo 8
 
 * Comandos de Linux
+* Instalación en un servidor Linux
 * Creación de usuarios y roles
 * Cadenas de Conexión
 * Proyecto 2
