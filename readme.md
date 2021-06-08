@@ -3,7 +3,7 @@
 ## Contenido
 
 * Sesión 1 - Fundamentos de Mongodb: Instalación, arquitectura, consultas y actualizaciones
-* Sesión 2 - Confuguración de un servidor: Comandos de Linux, instalación y Replica Sets
+* Sesión 2 - Confuguración de un servidor: Agregaciones, Comandos de Linux, instalación y Replica Sets
 * Sesión 3 - Configuración de nodos (multi-servidor): Sharding y Routers
 * Sesión 4 - Configuración real de múltiples nodos en Raspberry: Clústers reales
 
@@ -42,3 +42,41 @@
 * Actualización en objetos
 * Upserts (Autoinserciones)
 * Proyecto 1
+
+## Sesión 2
+
+### Módulo 5
+
+* Agregación $addFields
+* Agregación $bucket
+* Agregación $geoNear
+* Agregación $count
+* Agregación $group
+* Agregación $lookup
+
+### Módulo 6
+
+* Agregación $match
+* Agregación $merge
+* Agregación $out
+* Agregación $replaceRoot
+* Agregación $unset
+* Agregación $unwind
+
+### Módulo 7
+
+* Índices
+* Búsquedas avanzadas en textos
+* Búsquedas en fechas
+* Mongod
+* Mongoexport
+* Mongoimport
+* Mongodump
+* Mongorestore
+
+### Módulo 8
+
+* Comandos de Linux
+* Creación de usuarios y roles
+* Cadenas de Conexión
+* Proyecto 2
