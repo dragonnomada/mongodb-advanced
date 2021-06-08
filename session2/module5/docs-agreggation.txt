@@ -1,0 +1,7 @@
+Referencia a las agregaciones
+
+https://docs.mongodb.com/manual/aggregation/
+
+Referencia rápida de las agregaciones más importantes (examen)
+
+https://docs.mongodb.com/manual/meta/aggregation-quick-reference/

@@ -3,8 +3,8 @@
 ## Contenido
 
 * Sesión 1 - Fundamentos de Mongodb: Instalación, arquitectura, consultas y actualizaciones
-* Sesión 2 - Confuguración de un servidor: Agregaciones, Comandos de Linux, instalación y Replica Sets
-* Sesión 3 - Configuración de nodos (multi-servidor): Sharding y Routers
+* Sesión 2 - Confuguración de un servidor: Agregaciones, Comandos de Linux e instalación
+* Sesión 3 - Configuración de nodos (multi-servidor): Replica Sets, Sharding y Routers
 * Sesión 4 - Configuración real de múltiples nodos en Raspberry: Clústers reales y Proyectos
 
 ## Sesión 1
@@ -47,12 +47,12 @@
 
 ### Módulo 5
 
-* Agregación $addFields
-* Agregación $bucket
+* Agregación $addFields (`<newField>: <expression>`)
+* Agregación $bucket (`groupBy: <field>, boundaries: <array>, output: { <newField>: <$accum expr> }`)
 * Agregación $geoNear
 * Agregación $count
-* Agregación $group
-* Agregación $lookup
+* Agregación $group (`_id: <expression>, <newField>: <$accum expr>`)
+* Agregación $lookup (`from: <collection>, localField: <path>, foreingField: <path>, as: <path output-array>`)
 
 ### Módulo 6
 
