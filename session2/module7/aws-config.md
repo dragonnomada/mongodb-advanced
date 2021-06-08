@@ -4,6 +4,8 @@
 
 1. Dirigirnos a [https://aws.amazon.com]
 
+![aws-1.png](aws-1.png)
+
 ## Instalación de MongoDB en Linux
 
 Docs: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/]
