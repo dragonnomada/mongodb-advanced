@@ -49,25 +49,26 @@
 
 * Agregación $addFields (`<newField>: <expression>`)
 * Agregación $bucket (`groupBy: <field>, boundaries: <array>, output: { <newField>: <$accum expr> }`)
-* Agregación $geoNear
-* Agregación $count
+* Agregación $geoNear (`near: <geoJSON>, distanceField: <path>, minDistance: <value>, maxDistance: <value>, query: <query>`)
+* Agregación $count (`<field to count>`)
 * Agregación $group (`_id: <expression>, <newField>: <$accum expr>`)
-* Agregación $lookup (`from: <collection>, localField: <path>, foreingField: <path>, as: <path output-array>`)
+* Agregación $lookup (`from: <collection>, localField: <path>, foreignField: <path>, as: <path output-array>`)
 
 ### Módulo 6
 
-* Agregación $match
-* Agregación $merge
-* Agregación $out
-* Agregación $replaceRoot
-* Agregación $unset
-* Agregación $unwind
+* Agregación $match (`<query> { <field>: { $operator } | $operator: <expression> }`)
+* Agregación $merge (`into: <collection>, on: [<localField>, <foreignField>], whenMatched: <strategy>, whenNotMatched: <strategy>`)
+* Agregación $out (`<collection to replace>`)
+* Agregación $replaceRoot (`newRoot: <path to field type object>`)
+* Agregación $unset (`<field> | [<field1>, <field2>, ...] | [<path1>, <path2>]`)
+* Agregación $unwind (`<path to field type array>`)
 
 ### Módulo 7
 
-* Índices
-* Búsquedas avanzadas en textos
-* Búsquedas en fechas
+* Comandos de Linux
+* Instalación en un servidor Linux
+* Creación de usuarios y roles
+* Cadenas de Conexión
 * Mongod
 * Mongoexport
 * Mongoimport
@@ -76,8 +77,7 @@
 
 ### Módulo 8
 
-* Comandos de Linux
-* Instalación en un servidor Linux
-* Creación de usuarios y roles
-* Cadenas de Conexión
+* Índices
+* Búsquedas avanzadas en textos
+* Búsquedas en fechas
 * Proyecto 2
