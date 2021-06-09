@@ -142,7 +142,7 @@ sudo systemctl enable mongod
 sudo systemctl status mongod
 ```
 
-![mongo-1](sreenshots/mongo/mongo-1.png)
+![mongo-1](creenshots/mongo/mongo-1.png)
 
 > Para detener el servicio `mongod`
 
@@ -178,4 +178,16 @@ mongo <uri>
 mongo mongodb://18.117.240.224:27017/test
 ```
 
+## Habilitar el acceso en el servidor al puerto 27017
 
+### Dirigirse a Seguridad > Grupos de Seguridad
+
+![aws-24](screenshots/aws/aws-24.png)
+
+### Agregar una regla de entrada en Reglas de Entrada > Editar Reglas de Entrada
+
+![aws-25](screenshots/aws/aws-25.png)
+
+### Agregar la regla TCP Personalizado en el puerto 27017 para "Cualquier lugar"
+
+![aws-26](screenshots/aws/aws-26.png)
