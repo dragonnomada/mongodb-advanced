@@ -81,3 +81,17 @@
 * Búsquedas avanzadas en textos
 * Búsquedas en fechas
 * Proyecto 2
+
+## Sesión 3
+
+### Módulo 9
+
+* Replica Sets
+* Sharding
+* Routers
+
+### Módulo 10
+
+* Configuración e instalación de un Replicas Set
+* Configuración e instalación de un Sharding
+* Configuración e instalación de un Router
