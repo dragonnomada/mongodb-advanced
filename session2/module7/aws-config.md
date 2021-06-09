@@ -142,7 +142,7 @@ sudo systemctl enable mongod
 sudo systemctl status mongod
 ```
 
-![mongo-1](creenshots/mongo/mongo-1.png)
+![mongo-1](screenshots/mongo/mongo-1.png)
 
 > Para detener el servicio `mongod`
 
