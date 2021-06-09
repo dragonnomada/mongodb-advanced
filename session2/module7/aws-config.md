@@ -94,9 +94,9 @@ ssh -i "path/xxxx.pem" ubuntu@<ip|dns>
 
 ## Instalación de MongoDB en Linux
 
-Docs: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/]
+Docs: [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/]([https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-> Agregar las claves al `APT`
+> Agregar las claves al `apt`
 
 ```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
@@ -141,6 +141,8 @@ sudo systemctl enable mongod
 ```bash
 sudo systemctl status mongod
 ```
+
+![mongo-1](sreenshots/mongo/mongo-1.png)
 
 > Para detener el servicio `mongod`
 
