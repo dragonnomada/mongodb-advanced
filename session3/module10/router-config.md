@@ -1,3 +1,11 @@
+# Configurar un servidor de Router
+
+## 1. Registrar el servicio `mongos`
+
+> Registramos el servicio de `mongos`
+
+* __Nota__: El servicio `mongos` a diferencia de `mongod` no retiene datos y es utilizado para solamente recibir las operaciones de escritura y lectura a las bases de datos tipo `sharding`.
+
 ```bash
 sudo nano /lib/systemd/system/mongos.service
 
@@ -27,7 +35,11 @@ TasksAccounting=false
 WantedBy=multi-user.target
 ```
 
+## 2. Definir el archivo de configuración del router `mongos`
 
+> Crear y editar el archivo de configuración
+
+* __Nota__: El archivo podría tener problemas de lectura por parte de `mongos` por lo que hay que asignar los permisos necesarios como `chmod 400` y `chown mongodb:mongodb` como se hizo para `replica.key`.
 
 ```bash
 sudo nano /etc/mongos.conf
@@ -58,6 +70,12 @@ systemLog:
   path: /var/log/mongodb/mongos.log
 ```
 
+## 3. Agregar un usuario de administración para el router `mongos`
+
+> Creamos un usuario de administración (usando el usuario `botadmin`)
+
+* __Nota__: El usuario de administración del clúster debe tener los roles de `clusterAdmin` para poder registrar nuevos nodos tipo `shard`.
+
 ```bash
 use admin
 
@@ -74,6 +92,12 @@ db.createUser({
     ]
 })
 ```
+
+## 4. Agregar/registrar el nodo tipo `shard`
+
+> Registrar el nodo `shard` mediante su nombre y ubicación
+
+* __Nota__: Deberemos ingresar al mongo shell sobre el router usando el usuario administrador con el role `clusterAdmin`.
 
 ```bash
 sh.addShard( "replicaShardServer/3.17.28.87:27017")

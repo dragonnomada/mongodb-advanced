@@ -95,3 +95,9 @@
 * Configuración e instalación de un Replicas Set (`primary`, `secondary`, `arbiter`)
 * Configuración e instalación de un Sharding (`primary`, `secondary`, `arbiter`)
 * Configuración e instalación de un Router (`mongos`)
+
+## Sesión 4
+
+### Proyecto 1
+
+* 
