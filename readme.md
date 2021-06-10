@@ -86,9 +86,9 @@
 
 ### Módulo 9
 
-* Replica Sets
-* Sharding
-* Routers
+* Replica Sets (`primary`, `secondary`, `arbiter` | `mongod` -> `n-mongod` | `redundacy + availability`)
+* Sharding (`node -> replica sets` | `data partial distribution`)
+* Routers (`node root` | `mongos`)
 
 ### Módulo 10
 
