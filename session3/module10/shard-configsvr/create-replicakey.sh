@@ -1,0 +1,1 @@
+openssl rand -base64 756 > replica.key

@@ -5,7 +5,7 @@
 * Sesión 1 - Fundamentos de Mongodb: Instalación, arquitectura, consultas y actualizaciones
 * Sesión 2 - Confuguración de un servidor: Agregaciones, Comandos de Linux e instalación
 * Sesión 3 - Configuración de nodos (multi-servidor): Replica Sets, Sharding y Routers
-* Sesión 4 - Configuración real de múltiples nodos en Raspberry: Clústers reales y Proyectos
+* Sesión 4 - Proyectos
 
 ## Sesión 1
 
@@ -92,6 +92,6 @@
 
 ### Módulo 10
 
-* Configuración e instalación de un Replicas Set
-* Configuración e instalación de un Sharding
-* Configuración e instalación de un Router
+* Configuración e instalación de un Replicas Set (`primary`, `secondary`, `arbiter`)
+* Configuración e instalación de un Sharding (`primary`, `secondary`, `arbiter`)
+* Configuración e instalación de un Router (`mongos`)
