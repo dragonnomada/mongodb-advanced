@@ -197,3 +197,22 @@ _Nota_: Generar números de clientes aleatorios, pero que se repitan (por ejempl
     "rating": 2.1
 }
 ```
+
+> Pista: Comparación entre fechas
+
+```js
+const query = { 
+    $and: [ 
+        { 
+            $expr: { 
+                $gte: [{ $dateFromString: { dateString: "$transferAt" } }, ISODate("2021-06-10T21:40:00.000Z") ] 
+            } 
+        }, 
+        {
+            $expr: { 
+                $lt: [{ $dateFromString: { dateString: "$transferAt" } }, ISODate("2021-06-10T21:45:00.000Z") ] 
+            }
+        } 
+    ] 
+}
+```
