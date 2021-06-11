@@ -41,7 +41,6 @@
 * Actualización en Arreglos
 * Actualización en objetos
 * Upserts (Autoinserciones)
-* Proyecto 1
 
 ## Sesión 2
 
@@ -80,7 +79,6 @@
 * Índices
 * Búsquedas avanzadas en textos
 * Búsquedas en fechas
-* Proyecto 2
 
 ## Sesión 3
 
@@ -100,4 +98,4 @@
 
 ### Proyecto 1
 
-* 
+* CallCenter
